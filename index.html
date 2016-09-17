@@ -585,9 +585,17 @@
                             </div>
                         </div>
                     </div>
-					   <div class="output-content" id="Brix">
+			<div class="output-content" id="Brix">
                         <div style="display: table;width:100%;">
                             <div style="display: table-cell;vertical-align: middle;width: 8rem;border-right: solid .1rem #eee;padding:.6rem 1.2rem;">Brix</div>
+                            <div style="display: table-cell;vertical-align: middle;padding:.6rem 1.2rem;">
+                                <input type="text" class="output-text" readonly style="width: 100%;display: block;"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="output-content" id="Acid">
+                        <div style="display: table;width:100%;">
+                            <div style="display: table-cell;vertical-align: middle;width: 8rem;border-right: solid .1rem #eee;padding:.6rem 1.2rem;">Acid</div>
                             <div style="display: table-cell;vertical-align: middle;padding:.6rem 1.2rem;">
                                 <input type="text" class="output-text" readonly style="width: 100%;display: block;"></input>
                             </div>
@@ -859,8 +867,11 @@
 
                 // formula
 
-                var Brix = 100.217-51.521*round_a+7.27*(round_a^2)
+                var Brix = 2.646+0.028*round_L+0.032*round_a-0.0186round_b
+		
+		// formula
 
+                var Acid = 0.071+0.006*round_L+0.004*round_a-0.008*round_b
 
                 // making the color the value of the input
                 $('#rgb input').val(rgb);
